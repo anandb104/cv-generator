@@ -1,11 +1,16 @@
-import { Button } from "@/components/ui/button"
-
+import Sidebar from "./components/Sidebar.jsx"
+import Header from "./components/Header.jsx"
+import './index.css'
+import Preview from "./components/Preview.jsx"
 function App() {
   return (
-    <div className="flex min-h-svh flex-col items-center justify-center">
-      <Button>Click me</Button>
-    </div>
+      <div className="min-h-screen flex flex-col">
+        <Header/>
+        <div className="flex flex-1">
+        <Sidebar/>
+        <Preview/>
+        </div>
+        </div>
   )
 }
-
 export default App 
