@@ -39,29 +39,20 @@ function General() {
         <div className="grid grid-cols-2 gap-4">
           <Field className='text-white'>
             <FieldLabel htmlFor="form-phone">Phone</FieldLabel>
-            <Input id="form-phone" type="tel" placeholder="+1 (555) 123-4567" />
+            <Input id="form-phone" type="tel" placeholder="9876543210" />
           </Field>
           <Field className='text-white'>
-            <FieldLabel htmlFor="form-country">Country</FieldLabel>
-            <Select defaultValue="us">
-              <SelectTrigger id="form-country">
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="us">United States</SelectItem>
-                <SelectItem value="uk">United Kingdom</SelectItem>
-                <SelectItem value="ca">Canada</SelectItem>
-              </SelectContent>
-            </Select>
+          <FieldLabel htmlFor="form-github">Github</FieldLabel>
+          <Input id="form-github" type="email" placeholder="john@github.com" />
           </Field>
         </div>
         <Field className='text-white'>
-          <FieldLabel htmlFor="form-address">Address</FieldLabel>
-          <Input id="form-address" type="text" placeholder="123 Main St" />
+        <FieldLabel htmlFor="form-linkedin">Linkedin</FieldLabel>
+        <Input id="form-linkedin" type="email" placeholder="john@linkedin.com" />
         </Field>
         <Field orientation="horizontal">
           <Button type="button" variant="outline">
-            Cancel
+            Edit
           </Button>
           <Button type="submit">Submit</Button>
         </Field>

@@ -31,13 +31,13 @@ export default function Resumepdf(){
         <Page style={styles.page}>
             <Text style={styles.heading}>Name of The Person</Text>
             <Text style={styles.normaltext}>Email | Contact No. | Github | Linkedin </Text>
-            <View style={{minHeight:"150px"}}>
+            <View style={{minHeight:"170px"}}>
             <Text style={styles.subheading}>Skills </Text>
             </View>
-            <View style={{minHeight:"150px"}}>
+            <View style={{minHeight:"170px"}}>
             <Text style={styles.subheading}>Coursework </Text>
             </View>
-            <View style={{minHeight:"150px"}}>
+            <View style={{minHeight:"170px"}}>
             <Text style={styles.subheading}>Project </Text>
             </View>
             <View style={{minHeight:"150px"}}>
