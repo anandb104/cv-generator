@@ -6,13 +6,6 @@ import {
   FieldLabel,
 } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
 
 function General() {
   return (
@@ -43,12 +36,12 @@ function General() {
           </Field>
           <Field className='text-white'>
           <FieldLabel htmlFor="form-github">Github</FieldLabel>
-          <Input id="form-github" type="email" placeholder="john@github.com" />
+          <Input id="form-github" type="text" placeholder="www.john.github.com" />
           </Field>
         </div>
         <Field className='text-white'>
         <FieldLabel htmlFor="form-linkedin">Linkedin</FieldLabel>
-        <Input id="form-linkedin" type="email" placeholder="john@linkedin.com" />
+        <Input id="form-linkedin" type="text" placeholder="www.john.linkedin.com" />
         </Field>
         <Field orientation="horizontal">
           <Button type="button" variant="outline">

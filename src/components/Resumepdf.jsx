@@ -22,8 +22,12 @@ let styles=StyleSheet.create({
         textAlign:"left",
         marginTop:"10px",
         fontSize:"12px"
-    }
-
+    },
+   row:{
+    display:"flex",
+    flexDirection:"row",
+    justifyContent:"space-between",
+   }
 })
 export default function Resumepdf(){
     return(
@@ -42,6 +46,17 @@ export default function Resumepdf(){
             </View>
             <View style={{minHeight:"150px"}}>
             <Text style={styles.subheading}>Education</Text>
+            <View style={styles.row}>
+            <Text style={styles.paratext}>College Name</Text>
+            <Text style={styles.paratext}>College Years </Text>
+            </View>
+            <Text style={styles.paratext}>Branch Name</Text>
+            <View style={styles.row}>
+            <Text style={styles.paratext}>School Name</Text>
+            <Text style={styles.paratext}>School Years </Text>
+            </View>
+            <Text style={styles.paratext}>10th percentage   12th Percentage</Text>
+            
             </View>
         </Page>
     </Document>
