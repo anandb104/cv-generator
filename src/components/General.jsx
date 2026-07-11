@@ -16,6 +16,8 @@ import {
 
 function General() {
   return (
+    <div className="mb-9">
+      <h1 className="mb-4 text-white">Enter Your General Information</h1>
     <form className="w-full max-w-sm ">
       <FieldGroup>
         <Field className='text-white'>
@@ -65,6 +67,7 @@ function General() {
         </Field>
       </FieldGroup>
     </form>
+    </div>
   )
 }
 export default General
