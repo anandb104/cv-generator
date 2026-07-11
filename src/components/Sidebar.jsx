@@ -3,7 +3,7 @@ import Education from"./Education.jsx";
 import Experience from"./Experience.jsx";
 export function Sidebar(){
   return(
-    <div className="w-1/2 pt-7 pl-10 overflow-y-auto">
+    <div className="w-1/3 pt-7 pl-10 overflow-y-auto">
         <General/>
         <Education/>
         <Experience/> 
