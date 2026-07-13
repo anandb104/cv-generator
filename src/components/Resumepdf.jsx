@@ -29,12 +29,12 @@ let styles=StyleSheet.create({
     justifyContent:"space-between",
    }
 })
-export default function Resumepdf({generalinfo}){
+export default function Resumepdf({generalinfo,educationinfo}){
     return(
     <Document>
         <Page style={styles.page}>
             <Text style={styles.heading}>{generalinfo.name}</Text>
-            <Text style={styles.normaltext}>{generalinfo.email} |{generalinfo.phone} | {generalinfo.github} |{generalinfo.linkedin} </Text>
+            <Text style={styles.normaltext}>{generalinfo.email} | {generalinfo.phone} | {generalinfo.github} | {generalinfo.linkedin} </Text>
             <View style={{minHeight:"170px"}}>
             <Text style={styles.subheading}>Skills </Text>
             </View>
@@ -47,15 +47,15 @@ export default function Resumepdf({generalinfo}){
             <View style={{minHeight:"150px"}}>
             <Text style={styles.subheading}>Education</Text>
             <View style={styles.row}>
-            <Text style={styles.paratext}>College Name</Text>
-            <Text style={styles.paratext}>College Years </Text>
+            <Text style={styles.paratext}>{educationinfo.collegename}</Text>
+            <Text style={styles.paratext}>{educationinfo.collegeyear} </Text>
             </View>
-            <Text style={styles.paratext}>Branch Name</Text>
+            <Text style={styles.paratext}>{educationinfo.branch}</Text>
             <View style={styles.row}>
-            <Text style={styles.paratext}>School Name</Text>
-            <Text style={styles.paratext}>School Years </Text>
+            <Text style={styles.paratext}>{educationinfo.schoolname}</Text>
+            <Text style={styles.paratext}>{educationinfo.schoolyear} </Text>
             </View>
-            <Text style={styles.paratext}>10th percentage   12th Percentage</Text>
+            <Text style={styles.paratext}>{educationinfo.tenth}   {educationinfo.twelth}</Text>
             
             </View>
         </Page>
