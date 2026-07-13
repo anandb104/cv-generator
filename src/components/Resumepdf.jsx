@@ -29,12 +29,12 @@ let styles=StyleSheet.create({
     justifyContent:"space-between",
    }
 })
-export default function Resumepdf(){
+export default function Resumepdf({generalinfo}){
     return(
     <Document>
         <Page style={styles.page}>
-            <Text style={styles.heading}>Name of The Person</Text>
-            <Text style={styles.normaltext}>Email | Contact No. | Github | Linkedin </Text>
+            <Text style={styles.heading}>{generalinfo.name}</Text>
+            <Text style={styles.normaltext}>{generalinfo.email} |{generalinfo.phone} | {generalinfo.github} |{generalinfo.linkedin} </Text>
             <View style={{minHeight:"170px"}}>
             <Text style={styles.subheading}>Skills </Text>
             </View>
