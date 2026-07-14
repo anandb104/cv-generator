@@ -37,17 +37,30 @@ function App() {
        Object-Oriented Programming\n
        `);
        let [projectinfo,setprojectinfo]=useState(
-        `Data Structures and Algorithms \n
-         Database Management Systems\n
-         Web Development \n
-         Object-Oriented Programming\n
-         `);
+        `Weather App                                                                  https://github.com/anandb104/weather-app\n
+\u2022Developed a weather forecasting web application using JavaScript, HTML, CSS, and Webpack, integrating the Visual Crossing Weather API to display real-time weather data and 3-day forecasts based on user-selected locations.
+\u2022 Implemented asynchronous data fetching, dynamic DOM updates, and weather-condition-based visual indicators,providing an interactive user experience with responsive design and error handling.\n
+Admin Dashboard                                                           https://github.com/anandb104/Admin-Dashboard \n
+\u2022 Designed a responsive Admin Dashboard layout using CSS Grid and semantic HTML for structured page organization.
+\u2022Created reusable UI components (navigation bar, cards, tables) using pure HTML and CSS with a clean, user-friendly design.\n 
+\n \nThermal Printer Using Arduino  \n  
+\u2022 Interfaced a thermal printer with Arduino to print text, sensor data, and custom messages using serial communication
+\u2022 Implemented hardware connections, printing commands, and real-time data handling to achieve reliable standalone printing.\n
+Mini Message Board                                                         https://github.com/anandb104/mini-message-board \n
+\u2022 Built a full-stack Mini Message Board application using Node.js, Express.js, and PostgreSQL, allowing users to post and
+display messages dynamically through a clean web interface.
+\u2022 Developed RESTful backend functionality with Express.js and PostgreSQL for efficient message handling, database
+storage, and real-time content rendering in the application.\n
+Smart Chess    \n
+\u2022 Developed a Smart Chess system using Arduino Uno and LED matrix integration to visually display chess moves in real time, enabling interactive gameplay with illuminated move guidance.
+\u2022 Integrated Raspberry Pi for Wi-Fi connectivity, remote online matches, and chess computation, enabling multiplayer gameplay and intelligent move processing through a connected smart chessboard system.
+`);
   return (
       <div className="h-screen flex flex-col bg-black">
         <Header/>
         <div className="flex flex-1 overflow-hidden">
-        <Sidebar generalinfo={generalinfo} setgeneralinfo={setgeneralinfo} educationinfo={educationinfo} seteducationinfo={seteducationinfo} setskillinfo={setskillinfo} skillinfo={skillinfo} courseworkinfo={courseworkinfo} setcourseworkinfo={setcourseworkinfo} />
-        <Preview generalinfo={generalinfo} educationinfo={educationinfo} skillinfo={skillinfo} courseworkinfo={courseworkinfo}/>
+        <Sidebar generalinfo={generalinfo} setgeneralinfo={setgeneralinfo} educationinfo={educationinfo} seteducationinfo={seteducationinfo} setskillinfo={setskillinfo} skillinfo={skillinfo} courseworkinfo={courseworkinfo} setcourseworkinfo={setcourseworkinfo} projectinfo={projectinfo} setprojectinfo={setprojectinfo} />
+        <Preview generalinfo={generalinfo} educationinfo={educationinfo} skillinfo={skillinfo} courseworkinfo={courseworkinfo} projectinfo={projectinfo}/>
         </div>
         <Footer/>
         </div>

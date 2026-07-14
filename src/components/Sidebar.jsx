@@ -3,13 +3,13 @@ import Education from"./Education.jsx";
 import Skills from"./Skills.jsx";
 import Experience from"./Experience.jsx";
 import Coursework from"./Coursework.jsx";
-export function Sidebar({generalinfo,setgeneralinfo,educationinfo,seteducationinfo,skillinfo,setskillinfo,courseworkinfo,setcourseworkinfo}){
+export function Sidebar({generalinfo,setgeneralinfo,educationinfo,seteducationinfo,skillinfo,setskillinfo,courseworkinfo,setcourseworkinfo,projectinfo,setprojectinfo}){
   return(
     <div className="w-1/3 pt-7 pl-10 overflow-y-auto">
         <General generalinfo={generalinfo} setgeneralinfo={setgeneralinfo}/>
         <Education educationinfo={educationinfo} seteducationinfo={seteducationinfo}/>
         <Skills skillinfo={skillinfo} setskillinfo={setskillinfo} /> 
-        <Experience/> 
+        <Experience projectinfo={projectinfo} setprojectinfo={setprojectinfo} /> 
         <Coursework courseworkinfo={courseworkinfo} setcourseworkinfo={setcourseworkinfo} /> 
     </div>
   )

@@ -30,7 +30,7 @@ let styles=StyleSheet.create({
     justifyContent:"space-between",
    }
 })
-export default function Resumepdf({generalinfo,educationinfo,skillinfo,courseworkinfo}){
+export default function Resumepdf({generalinfo,educationinfo,skillinfo,courseworkinfo,projectinfo}){
     return(
     <Document>
         <Page style={styles.page}>
@@ -46,7 +46,7 @@ export default function Resumepdf({generalinfo,educationinfo,skillinfo,coursewor
             </View>
             <View style={{minHeight:"160px"}}>
             <Text style={styles.subheading}>Project </Text>
-            {/* <Text style={styles.paratext}>{projectinfo}</Text> */}
+            <Text style={styles.paratext}>{projectinfo}</Text>
             </View>
             <View style={{minHeight:"160px"}}>
             <Text style={styles.subheading}>Education</Text>
