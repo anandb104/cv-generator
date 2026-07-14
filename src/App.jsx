@@ -21,12 +21,22 @@ function App() {
     tenth:"X-93%",
     twelth:"XII-96%",
   });
+   let [skillinfo,setskillinfo]=useState(
+    `Languages: C++, MATLAB,C,Python\n
+    Web Technologies: HTML5, CSS3, JavaScript, TailWind CSS,REST APIs, JSON,TypeScript\n
+     Backend Development: Node.js, Express.js\n
+     Database Management: PostgreSQL, SQL\n
+     Frameworks & Libraries: React.js\n
+     Embedded Systems: Arduino (Uno, ESP32), Embedded C\n
+     Tools & Software: Arduino IDE, MATLAB, VS Code,Git,Github\n
+     `);
+
   return (
       <div className="h-screen flex flex-col bg-black">
         <Header/>
         <div className="flex flex-1 overflow-hidden">
-        <Sidebar generalinfo={generalinfo} setgeneralinfo={setgeneralinfo} educationinfo={educationinfo} seteducationinfo={seteducationinfo} />
-        <Preview generalinfo={generalinfo} educationinfo={educationinfo}/>
+        <Sidebar generalinfo={generalinfo} setgeneralinfo={setgeneralinfo} educationinfo={educationinfo} seteducationinfo={seteducationinfo} setskillinfo={setskillinfo} skillinfo={skillinfo} />
+        <Preview generalinfo={generalinfo} educationinfo={educationinfo} skillinfo={skillinfo}/>
         </div>
         <Footer/>
         </div>

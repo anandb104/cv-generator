@@ -21,7 +21,7 @@ let styles=StyleSheet.create({
     paratext:{
         textAlign:"left",
         marginTop:"10px",
-        fontSize:"12px"
+        fontSize:"12px",
     },
    row:{
     display:"flex",
@@ -29,7 +29,7 @@ let styles=StyleSheet.create({
     justifyContent:"space-between",
    }
 })
-export default function Resumepdf({generalinfo,educationinfo}){
+export default function Resumepdf({generalinfo,educationinfo,skillinfo}){
     return(
     <Document>
         <Page style={styles.page}>
@@ -37,12 +37,15 @@ export default function Resumepdf({generalinfo,educationinfo}){
             <Text style={styles.normaltext}>{generalinfo.email} | {generalinfo.phone} | {generalinfo.github} | {generalinfo.linkedin} </Text>
             <View style={{minHeight:"170px"}}>
             <Text style={styles.subheading}>Skills </Text>
+            <Text style={styles.paratext}>{skillinfo}</Text>
             </View>
             <View style={{minHeight:"170px"}}>
             <Text style={styles.subheading}>Coursework </Text>
+            {/* <Text style={styles.paratext}>{courseworkinfo}</Text> */}
             </View>
             <View style={{minHeight:"170px"}}>
             <Text style={styles.subheading}>Project </Text>
+            {/* <Text style={styles.paratext}>{projectinfo}</Text> */}
             </View>
             <View style={{minHeight:"150px"}}>
             <Text style={styles.subheading}>Education</Text>
