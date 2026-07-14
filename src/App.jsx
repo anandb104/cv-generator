@@ -23,20 +23,31 @@ function App() {
   });
    let [skillinfo,setskillinfo]=useState(
     `Languages: C++, MATLAB,C,Python\n
-    Web Technologies: HTML5, CSS3, JavaScript, TailWind CSS,REST APIs, JSON,TypeScript\n
+     Web Technologies: HTML5, CSS3, JavaScript, TailWind CSS,REST APIs, JSON,TypeScript\n
      Backend Development: Node.js, Express.js\n
      Database Management: PostgreSQL, SQL\n
      Frameworks & Libraries: React.js\n
      Embedded Systems: Arduino (Uno, ESP32), Embedded C\n
      Tools & Software: Arduino IDE, MATLAB, VS Code,Git,Github\n
      `);
-
+     let [courseworkinfo,setcourseworkinfo]=useState(
+      `Data Structures and Algorithms \n
+       Database Management Systems\n
+       Web Development \n
+       Object-Oriented Programming\n
+       `);
+       let [projectinfo,setprojectinfo]=useState(
+        `Data Structures and Algorithms \n
+         Database Management Systems\n
+         Web Development \n
+         Object-Oriented Programming\n
+         `);
   return (
       <div className="h-screen flex flex-col bg-black">
         <Header/>
         <div className="flex flex-1 overflow-hidden">
-        <Sidebar generalinfo={generalinfo} setgeneralinfo={setgeneralinfo} educationinfo={educationinfo} seteducationinfo={seteducationinfo} setskillinfo={setskillinfo} skillinfo={skillinfo} />
-        <Preview generalinfo={generalinfo} educationinfo={educationinfo} skillinfo={skillinfo}/>
+        <Sidebar generalinfo={generalinfo} setgeneralinfo={setgeneralinfo} educationinfo={educationinfo} seteducationinfo={seteducationinfo} setskillinfo={setskillinfo} skillinfo={skillinfo} courseworkinfo={courseworkinfo} setcourseworkinfo={setcourseworkinfo} />
+        <Preview generalinfo={generalinfo} educationinfo={educationinfo} skillinfo={skillinfo} courseworkinfo={courseworkinfo}/>
         </div>
         <Footer/>
         </div>

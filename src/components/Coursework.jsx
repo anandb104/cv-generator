@@ -6,17 +6,19 @@ import {
   import { Textarea } from "@/components/ui/textarea"
   import  '../index.css'
   
-  export function Experience() {
+  export function Coursework({courseworkinfo,setcourseworkinfo}) {
     return (
         <div className="mb-9">
         <h1 className="mb-4 text-white" >Enter Your Coursework Information</h1>
       <Field>
         <FieldLabel htmlFor="textarea-message" className=" text-white">Coursework:</FieldLabel>
         <FieldDescription>Enter your Coursework below.</FieldDescription>
-        <Textarea id="textarea-message" placeholder="Type your Coursework here." className="!w-100 text-white"/>
+        <Textarea id="textarea-message" placeholder="Type your Coursework here." className="!w-100 text-white" value={courseworkinfo} onChange={(e)=>{
+          setcourseworkinfo(e.target.value)
+        }}/>
       </Field>
       </div>
     )
   }
   
-export default Experience
+export default Coursework
