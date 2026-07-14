@@ -1,16 +1,57 @@
-# React + Vite
+# CV Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern CV/Resume Generator built with **React**, **Vite**, **Tailwind CSS**, **shadcn/ui**, and **React PDF**. The application allows users to enter their resume details through an intuitive form and instantly preview a professionally formatted resume. All data is automatically saved to the browser's local storage, so refreshing the page does not erase the information.
+---
+## Features
 
-Currently, two official plugins are available:
+- Live PDF preview while editing
+- General Information section
+  - Name
+  - Email
+  - Phone Number
+  - GitHub
+  - LinkedIn
+- Education section
+- Skills section
+- Coursework section
+- Projects section
+- Automatic local storage saving
+- Responsive two-panel layout
+- Modern UI built with shadcn/ui and Tailwind CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- JavaScript
+- Tailwind CSS
+- shadcn/ui
+- React PDF (`@react-pdf/renderer`)
+- Local Storage API
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project Structure
+
+```
+src/
+│
+├── components/
+│   ├── Header.jsx
+│   ├── Footer.jsx
+│   ├── Sidebar.jsx
+│   ├── Preview.jsx
+│   ├── Resumepdf.jsx
+│   ├── General.jsx
+│   ├── Education.jsx
+│   ├── Skills.jsx
+│   ├── Coursework.jsx
+│   └── Experience.jsx
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+---
