@@ -4,7 +4,9 @@ import './index.css'
 import Preview from "./components/Preview.jsx"
 import Footer from "./components/Footer.jsx"
 import {useEffect, useState} from "react";
+
 function App() {
+  //general info
   let [generalinfo,setgeneralinfo]=useState(()=>{
     let saved=localStorage.getItem("generalinfo");
     if(saved){
@@ -23,6 +25,8 @@ function App() {
   useEffect(()=>{
     localStorage.setItem("generalinfo",JSON.stringify(generalinfo))
   },[generalinfo]);
+
+//education info
   let [educationinfo,seteducationinfo]=useState(()=>{
     let saved=localStorage.getItem("educationinfo");
     if(saved){
@@ -38,23 +42,47 @@ function App() {
     tenth:"X-93%",
     twelth:"XII-96%",
   }}});
-   let [skillinfo,setskillinfo]=useState(
-    `Languages: C++, MATLAB,C,Python\n
+  useEffect(()=>{
+    localStorage.setItem("educationinfo",JSON.stringify(educationinfo))
+  },[educationinfo]);
+  //skill info
+   let [skillinfo,setskillinfo]=useState(()=>{
+    let saved=localStorage.getItem("skillinfo");
+    if(saved){
+      return JSON.parse(saved);
+    }
+      return  `Languages: C++, MATLAB,C,Python\n
      Web Technologies: HTML5, CSS3, JavaScript, TailWind CSS,REST APIs, JSON,TypeScript\n
      Backend Development: Node.js, Express.js\n
      Database Management: PostgreSQL, SQL\n
      Frameworks & Libraries: React.js\n
      Embedded Systems: Arduino (Uno, ESP32), Embedded C\n
-     Tools & Software: Arduino IDE, MATLAB, VS Code,Git,Github
-     `);
-     let [courseworkinfo,setcourseworkinfo]=useState(
-      `Data Structures and Algorithms \n
+     Tools & Software: Arduino IDE, MATLAB, VS Code,Git,Github`});
+     useEffect(()=>{
+      localStorage.setItem("skillinfo",JSON.stringify(skillinfo))
+    },[skillinfo]);
+  //coursework info
+     let [courseworkinfo,setcourseworkinfo]=useState(()=>{
+      let saved=localStorage.getItem("courseworkinfo");
+      if(saved){
+        return JSON.parse(saved);
+      }
+      return `Data Structures and Algorithms \n
        Database Management Systems\n
        Web Development \n
        Object-Oriented Programming
-       `);
-       let [projectinfo,setprojectinfo]=useState(
-        `Weather App                                                                  https://github.com/anandb104/weather-app\n
+       `});
+       useEffect(()=>{
+        localStorage.setItem("courseworkinfo",JSON.stringify(courseworkinfo))
+      },[courseworkinfo]);
+
+      //project info
+       let [projectinfo,setprojectinfo]=useState(()=>{
+        let saved=localStorage.getItem("projectinfo");
+        if(saved){
+          return JSON.parse(saved);
+        }
+        return `Weather App                                                                  https://github.com/anandb104/weather-app\n
 \u2022Developed a weather forecasting web application using JavaScript, HTML, CSS, and Webpack, integrating the Visual Crossing Weather API to display real-time weather data and 3-day forecasts based on user-selected locations.
 \u2022 Implemented asynchronous data fetching, dynamic DOM updates, and weather-condition-based visual indicators,providing an interactive user experience with responsive design and error handling.\n
 Admin Dashboard                                                           https://github.com/anandb104/Admin-Dashboard \n
@@ -69,7 +97,10 @@ Mini Message Board                                                         https
 Smart Chess    \n
 \u2022 Developed a Smart Chess system using Arduino Uno and LED matrix integration to visually display chess moves in real time, enabling interactive gameplay with illuminated move guidance.
 \u2022 Integrated Raspberry Pi for Wi-Fi connectivity, remote online matches, and chess computation, enabling multiplayer gameplay and intelligent move processing through a connected smart chessboard system.
-`);
+`});
+useEffect(()=>{
+  localStorage.setItem("projectinfo",JSON.stringify(projectinfo))
+},[projectinfo]);
   return (
       <div className="h-screen flex flex-col bg-black">
         <Header/>
