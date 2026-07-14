@@ -55,3 +55,6 @@ src/
 └── index.css
 ```
 ---
+The demonstration of the project can be found on (https://cv-generator-psi-three.vercel.app/)
+
+![screenshot of the project](./public/cv-generator-screen.png)
